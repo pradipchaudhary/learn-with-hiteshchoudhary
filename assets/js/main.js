@@ -3,7 +3,7 @@ console.log("Welcome to Todo List ");
 
 const form = document.querySelector("[data-form]");
 const lists = document.querySelector("[data-lists]");
-const input = document.querySelector("#input");
+let input = document.querySelector("#input");
 
 // Empty Array
 let todoArr = [];
@@ -13,11 +13,9 @@ form.addEventListener("submit", (e) => {
   let id = Math.floor(Math.random() * 1000);
   let todo = new Todo(id, input.value);
   todoArr = [...todoArr, todo];
-
   UI.displayData();
-  UI.clearInput();
 
-  console.log(todoArr);
+  UI.clearInput();
 });
 
 // Create Object
@@ -35,7 +33,7 @@ class UI {
     let displayData = todoArr.map((item) => {
       return `
         <div class="todo_item">
-          <p>Todo item</p>
+          <p>${item.todo}</p>
           <span>X</span>
         </div>
         `;
