@@ -1,6 +1,6 @@
-console.log("Welcome to Todo List ");
-// Grab all element
+// console.log("Welcome to Todo List ");
 
+// Grab all element
 const form = document.querySelector("[data-form]");
 const lists = document.querySelector("[data-lists]");
 let input = document.querySelector("#input");
@@ -14,8 +14,8 @@ form.addEventListener("submit", (e) => {
   let todo = new Todo(id, input.value);
   todoArr = [...todoArr, todo];
   UI.displayData();
-
   UI.clearInput();
+  UI.removeTodo();
 });
 
 // Create Object
@@ -34,15 +34,26 @@ class UI {
       return `
         <div class="todo_item">
           <p>${item.todo}</p>
-          <span>X</span>
+          <span class="remove">X</span>
         </div>
         `;
     });
     lists.innerHTML = displayData.join(" ");
   }
+
   // Clear Input
   static clearInput() {
-    input = "";
+    input.value = "";
+  }
+
+  // Remove List
+  static removeTodo() {
+    lists.addEventListener("click", (e) => {
+      if (e.target.classList.contains("remove")) {
+        console.log("Remove");
+        console.log(e.target.parentElement.remove());
+      }
+    });
   }
 }
 

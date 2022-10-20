@@ -24,6 +24,12 @@ body {
   width: 100%;
   border: 1px solid #a3a3a3;
 }
+.container .form input:hover,
+.container .form input:focus {
+  outline: none;
+  border: 1px solid #a3a3a3;
+  border-radius: 0px;
+}
 .container .form button {
   padding: 8px;
   background-color: #000;
