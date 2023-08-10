@@ -1,0 +1,45 @@
+/* Google Fonts */
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;600;700&display=swap");
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    width: 100%;
+    height: 100vh;
+    background: #efefef;
+    font-family: "Poppins", sans-serif;
+}
+
+/* === Testimonial === */
+#testimonial {
+    background: gray;
+    padding: 50px;
+    text-align: center;
+}
+#testimonial .content {
+    display: flex;
+    gap: 30px;
+}
+
+.testimonial {
+    min-width: 700px;
+    border: 1px solid #ccc;
+    margin-top: 30px;
+    padding: 30px;
+}
+.testimonial .img {
+    width: 80px;
+    height: 80px;
+    border: 2px solid #ccc;
+}
+.testimonial .message {
+    margin-top: 20px;
+}
+.testimonial .name {
+    margin-top: 10px;
+    color: rgb(42, 42, 34);
+}
