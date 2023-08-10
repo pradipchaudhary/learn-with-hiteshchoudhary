@@ -5,6 +5,7 @@ import {
     Route,
     Link,
     Outlet,
+    useParams,
 } from "react-router-dom";
 
 const BlogPosts = {
@@ -36,7 +37,7 @@ function About() {
     );
 }
 
-function Blog() {
+function Posts() {
     return (
         <div>
             <h1> Blog Page </h1>
@@ -45,18 +46,35 @@ function Blog() {
     );
 }
 
-function BlogLists() {
+function PostLists() {
     return (
         <ul>
             {Object.entries(BlogPosts).map(([slug, { title }]) => (
                 <li key={slug}>
-                    <h3>{title}</h3>
+                    <Link to={`/blog/${slug}`}>
+                        <h3>{title}</h3>
+                    </Link>
                 </li>
             ))}
         </ul>
     );
 }
 
+// Sing Blog Post
+function Post() {
+    const { slug } = useParams();
+    const post = BlogPosts[slug];
+    if (!post) {
+        return <span>The blog post you've requested doesn't exist.</span>;
+    }
+    const { title, description } = post;
+    return (
+        <div style={{ padding: 20 }}>
+            <h3>{title}</h3>
+            <p>{description}</p>
+        </div>
+    );
+}
 function NoMatch() {
     return (
         <div>
@@ -67,19 +85,22 @@ function NoMatch() {
 }
 
 function App() {
+    console.log(useParams());
+    console.log("hello");
     return (
         <Router>
             <div className="App">
                 <nav>
                     <Link to="/">Home</Link>
                     <Link to="/about">About</Link>
-                    <Link to="/blog"> Blog </Link>
+                    <Link to="/posts"> Posts </Link>
                 </nav>
                 <Routes>
                     <Route path="/" element={<Home />} />
                     <Route path="/about" element={<About />} />
-                    <Route path="/blog" element={<Blog />}>
-                        <Route index element={<BlogLists />} />
+                    <Route path="/posts" element={<Posts />}>
+                        <Route index element={<PostLists />} />
+                        <Route path=":slug" element={<Post />} />
                     </Route>
                     <Route path="*" element={<NoMatch />} />
                 </Routes>
