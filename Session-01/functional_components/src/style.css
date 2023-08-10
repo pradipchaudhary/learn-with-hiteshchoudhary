@@ -1,0 +1,25 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    width: 100%;
+    height: 100vh;
+    background-color: gray;
+}
+
+.salary {
+    width: 300px;
+    height: 300px;
+    border: 1px solid gray;
+    text-align: center;
+    padding: 2rem;
+    line-height: 1.7;
+}
+
+button {
+    padding: 6px 10px;
+    margin-top: 10px;
+}
