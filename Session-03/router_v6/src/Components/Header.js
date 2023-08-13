@@ -1,5 +1,5 @@
 import React from "react";
-import { Link } from "react-router-dom";
+import { Link, NavLink } from "react-router-dom";
 import Logo from "../images/logo.png";
 import Home from "./Pages/Home";
 import About from "./Pages/About";
@@ -33,32 +33,32 @@ const Header = () => {
                         <div className="d-flex ml-auto flex-column flex-lg-row align-items-center">
                             <ul className="navbar-nav  ">
                                 <li className="nav-item active">
-                                    <Link className="nav-link" to="/">
+                                    <NavLink className="nav-link" to="/">
                                         Home{" "}
-                                    </Link>
+                                    </NavLink>
                                 </li>
                                 <li className="nav-item">
-                                    <Link className="nav-link" to="/about">
+                                    <NavLink className="nav-link" to="/about">
                                         {" "}
                                         About
-                                    </Link>
+                                    </NavLink>
                                 </li>
                                 <li className="nav-item">
-                                    <Link className="nav-link" to="/service">
+                                    <NavLink className="nav-link" to="/service">
                                         {" "}
                                         Service{" "}
-                                    </Link>
+                                    </NavLink>
                                 </li>
                                 <li className="nav-item">
-                                    <Link className="nav-link" to="/blog">
+                                    <NavLink className="nav-link" to="/blog">
                                         {" "}
                                         Blog{" "}
-                                    </Link>
+                                    </NavLink>
                                 </li>
                                 <li className="nav-item">
-                                    <Link className="nav-link" to="/contact">
+                                    <NavLink className="nav-link" to="/contact">
                                         Contact{" "}
-                                    </Link>
+                                    </NavLink>
                                 </li>
                             </ul>
                         </div>

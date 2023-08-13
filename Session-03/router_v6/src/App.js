@@ -8,6 +8,7 @@ import Contact from "./Components/Pages/Contact";
 import Page404 from "./Components/Pages/Page404";
 
 function App() {
+    console.log(Router);
     return (
         <Router>
             <Routes>

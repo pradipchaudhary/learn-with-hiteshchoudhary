@@ -91,8 +91,8 @@ body {
     font-size: 15px;
 }
 
-.custom_nav-container .navbar-nav .nav-item.active .nav-link,
-.custom_nav-container .navbar-nav .nav-item:hover .nav-link {
+.custom_nav-container .navbar-nav .nav-item .nav-link.active,
+.custom_nav-container .navbar-nav .nav-item.nav-link:hover {
     background-color: #4b208c;
     color: #ffffff;
 }
