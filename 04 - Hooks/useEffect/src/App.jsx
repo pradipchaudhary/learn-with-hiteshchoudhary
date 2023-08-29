@@ -1,4 +1,5 @@
 import "./App.css";
+import BasicEffect from "./components/BasicEffect";
 import Card from "./components/Card";
 
 function App() {
@@ -10,6 +11,8 @@ function App() {
             <div className="bg-yellow-600 py-2 mt-4">
                 <h4 className="h4 text-4xl">Footer</h4>
             </div>
+
+            <BasicEffect />
         </>
     );
 }
