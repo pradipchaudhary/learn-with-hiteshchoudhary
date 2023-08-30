@@ -1,0 +1,15 @@
+#root {
+    max-width: 1280px;
+    margin: 0 auto;
+    padding: 2rem;
+    text-align: center;
+}
+.useEffect {
+    display: flex;
+    justify-content: space-around;
+    gap: 50px;
+}
+.FunctionalComponent,
+.ClassComponent {
+    width: 500px;
+}
