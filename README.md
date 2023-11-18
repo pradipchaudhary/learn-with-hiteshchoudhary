@@ -13,3 +13,8 @@ link: [Repository](https://github.com/codezri/react-router-v6-example/tree/main)
 3. Hook
 4. Virtual DOM
 5. Props
+6. useEffect, useRef and useCallbacks
+7. Custom hooks
+8. React Router
+9. Content API
+10. Redux toolkit
