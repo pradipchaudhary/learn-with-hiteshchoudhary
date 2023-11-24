@@ -9,10 +9,13 @@ const Count = () => {
     };
     return (
         <>
-            <div className="count">
-                <h2>Count </h2>
-                <h1>{count}</h1>
-                <button type="button" onClick={increaseCounter}>
+            <div className="text-center">
+                <h1 className="text-5xl font-bold text-white">{count}</h1>
+                <button
+                    className="bg-green-700  text-white font-bold py-3 px-7 mt-8 rounded uppercase"
+                    type="button"
+                    onClick={increaseCounter}
+                >
                     Increase{" "}
                 </button>
             </div>
