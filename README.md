@@ -1,21 +1,21 @@
 # React Notes
 
-### Import Cost
+## Import Cost
 
 -   React => 6KB
 -   ReactDOM => 130KB
 
-### Reconciliation
+## Reconciliation
 
-\_React is creating the virtual representation of your UI in the memory, and then ReactDOM receives that and syncs your UI (and the changes to it) to the DOM. This process is called reconciliation.
+> React is creating the virtual representation of your UI in the memory, and then ReactDOM receives that and syncs your UI (and the changes to it) to the DOM. This process is called reconciliation.
 
-**Recap**
+### Recap
 
 -   ReactDOM is the glue between React and the DOM.
 -   ReactDOM is separate from React because you can write React for native applications.
 -   Reconciliation is the process of syncing the Virtual DOM to the actual DOM.
 
-### Available Scripts
+## Available Scripts
 
 Learn [React Router v6](https://blog.logrocket.com/react-router-v6-guide)
 
