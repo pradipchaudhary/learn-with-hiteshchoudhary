@@ -2,10 +2,8 @@
 
 ## Import Cost
 
-React = 6KB
-ReactDOM = 130KB
-
----
+-React => 6KB
+-ReactDOM => 130KB
 
 Total = 136KB
 
