@@ -5,6 +5,10 @@
 React = 6KB
 ReactDOM = 130KB
 
+---
+
+Total = 136KB
+
 ## Reconciliation
 
 React is creating the virtual representation of your UI in the memory, and then ReactDOM receives that and syncs your UI (and the changes to it) to the DOM. This process is called reconciliation.
