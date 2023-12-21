@@ -1,10 +1,9 @@
-import UseState_Hooks from "./hooks/UseState_Hooks";
-
+import UseState from "./hooks/UseState";
 function App() {
     return (
         <>
             <div>
-                <UseState_Hooks />
+                <UseState />
             </div>
         </>
     );
