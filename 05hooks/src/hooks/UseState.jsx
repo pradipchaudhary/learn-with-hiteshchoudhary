@@ -26,6 +26,9 @@ const UseState = () => {
     };
 
     // Remove item from array
+    const removeItem = () => {
+        return setArray(...array, array.splice(array.length - 1));
+    };
 
     return (
         <div className="container mx-auto m-5">
@@ -56,10 +59,16 @@ const UseState = () => {
                     return <li key={i}> {arr} </li>;
                 })}
             </ul>
-            <button className="bg-blue-500 hover:bg-blue-700 text-white font-semibold py-2 px-4 m-2 rounded">
+            <button
+                className="bg-blue-500 hover:bg-blue-700 text-white font-semibold py-2 px-4 m-2 rounded"
+                onClick={addItem}
+            >
                 Add Arr
             </button>
-            <button className="bg-blue-500 hover:bg-blue-700 text-white font-semibold py-2 px-4 m-2 rounded">
+            <button
+                className="bg-blue-500 hover:bg-blue-700 text-white font-semibold py-2 px-4 m-2 rounded"
+                onClick={removeItem}
+            >
                 Remove Arr
             </button>
         </div>
