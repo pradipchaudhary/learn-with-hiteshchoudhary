@@ -20,6 +20,13 @@ const UseState = () => {
         };
     };
 
+    // Add Item from array
+    const addItem = () => {
+        return setArray(...array, 6);
+    };
+
+    // Remove item from array
+
     return (
         <div className="container mx-auto m-5">
             {/* String */}
@@ -49,10 +56,10 @@ const UseState = () => {
                     return <li key={i}> {arr} </li>;
                 })}
             </ul>
-            <button className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded">
+            <button className="bg-blue-500 hover:bg-blue-700 text-white font-semibold py-2 px-4 m-2 rounded">
                 Add Arr
             </button>
-            <button className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded">
+            <button className="bg-blue-500 hover:bg-blue-700 text-white font-semibold py-2 px-4 m-2 rounded">
                 Remove Arr
             </button>
         </div>
