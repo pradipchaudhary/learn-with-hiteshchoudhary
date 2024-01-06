@@ -67,10 +67,67 @@ This hook simplifies state management in functional components by allowing them 
 
 ### useEffect
 
-**\_Question:**
+**Question:**
+Can you explain the `useEffect` hook in React and provide some common use cases where it's beneficial?
 
-**Can you explain the useEffect hook in React and provide some common use cases where it's beneficial?**
+**Answer:**
+The `useEffect` hook in React is used to perform side effects in functional components. It allows you to perform tasks that cannot be handled during render, such as data fetching, subscriptions, manual DOM manipulations, and more. It runs after every completed render.
 
-**\_Answer:**
+**Use Cases:**
 
-The useEffect hook in React is used to perform side effects in functional components. It allows you to perform tasks that cannot be handled during render, such as data fetching, subscriptions, manual DOM manipulations, and more. It runs after every completed render.
+1. **Data Fetching:** One common use case for `useEffect` is fetching data from an API. You can initiate a network request and update the component's state with the retrieved data.
+
+    ```javascript
+    useEffect(() => {
+        fetch("https://api.example.com/data")
+            .then((response) => response.json())
+            .then((data) => {
+                // Update state with fetched data
+                setData(data);
+            })
+            .catch((error) => {
+                // Handle errors
+                setError(error);
+            });
+    }, []);
+    ```
+
+2. **Subscriptions and Event Listeners:** Setting up subscriptions or event listeners that need to be managed when a component mounts and removed when it unmounts.
+
+    ```javascript
+    useEffect(() => {
+        const subscription = someSubscriptionService.subscribe((data) => {
+            // Handle incoming subscription data
+            handleSubscriptionData(data);
+        });
+
+        return () => {
+            // Clean up subscription when component unmounts
+            subscription.unsubscribe();
+        };
+    }, []);
+    ```
+
+3. **Document Title Updates:** Changing the document title based on the component's state or props.
+
+    ```javascript
+    useEffect(() => {
+        document.title = `New Title: ${count}`;
+    }, [count]);
+    ```
+
+4. **Component Lifecycle Events:** Emulating component lifecycle events like `componentDidMount`, `componentDidUpdate`, and `componentWillUnmount`.
+
+    ```javascript
+    useEffect(() => {
+        // componentDidMount
+        // Perform initialization tasks here
+
+        return () => {
+            // componentWillUnmount
+            // Clean up tasks before component unmounts
+        };
+    }, []);
+    ```
+
+The `useEffect` hook helps in managing side effects and keeps the component logic clean by separating concerns related to data fetching, subscriptions, DOM manipulations, and more from the main component rendering process.
