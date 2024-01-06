@@ -64,3 +64,13 @@ export default Counter;
 In this example, useState(0) initializes the count state variable with an initial value of 0. The setCount function allows updating the count state variable. When the "Increment" button is clicked, it increases the count by 1, and when the "Decrement" button is clicked, it decreases the count by 1. The count value is displayed within the <p> element using curly braces {count} to showcase the current state.
 
 This hook simplifies state management in functional components by allowing them to manage their state without converting them into class components.
+
+### useEffect
+
+**\_Question:**
+
+**Can you explain the useEffect hook in React and provide some common use cases where it's beneficial?**
+
+**\_Answer:**
+
+The useEffect hook in React is used to perform side effects in functional components. It allows you to perform tasks that cannot be handled during render, such as data fetching, subscriptions, manual DOM manipulations, and more. It runs after every completed render.
