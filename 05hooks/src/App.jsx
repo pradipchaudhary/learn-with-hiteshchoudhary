@@ -1,14 +1,5 @@
-import UseEffect from "./hooks/UseEffect";
-import UseState from "./hooks/UseState";
 function App() {
-    return (
-        <>
-            <div>
-                {/* <UseState /> */}
-                <UseEffect />
-            </div>
-        </>
-    );
+    return <>Hello</>;
 }
 
 export default App;

@@ -32,3 +32,33 @@ React is creating the virtual representation of your UI in the memory, and then 
 Learn [React Router v6](https://blog.logrocket.com/react-router-v6-guide)
 
 link: [Repository](https://github.com/codezri/react-router-v6-example/tree/main)
+
+## React Hooks
+
+_1. useState_ : -
+
+The useState hook in React is used to add state to functional components. It allows you to declare state variables in your functional components. It returns an array with two elements: the current state value and a function to update that value.
+
+Here's an example demonstrating the useState hook in action:
+
+```JSX
+import React, { Component } from 'react';
+import logo from './logo.svg';
+import './App.css';
+
+class Child extends Component {
+  render() {
+    return (
+        <p className="App-intro">
+          I'm a childish component
+        </p>
+    );
+  }
+}
+
+export default Child;
+```
+
+In this example, useState(0) initializes the count state variable with an initial value of 0. The setCount function allows updating the count state variable. When the "Increment" button is clicked, it increases the count by 1, and when the "Decrement" button is clicked, it decreases the count by 1. The count value is displayed within the <p> element using curly braces {count} to showcase the current state.
+
+This hook simplifies state management in functional components by allowing them to manage their state without converting them into class components.
