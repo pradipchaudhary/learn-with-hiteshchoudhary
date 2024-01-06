@@ -42,21 +42,23 @@ The useState hook in React is used to add state to functional components. It all
 Here's an example demonstrating the useState hook in action:
 
 ```JSX
-import React, { Component } from 'react';
-import logo from './logo.svg';
-import './App.css';
+import React, { useState } from 'react';
 
-class Child extends Component {
-  render() {
-    return (
-        <p className="App-intro">
-          I'm a childish component
-        </p>
-    );
-  }
-}
+const Counter = () => {
+  // Declaring a state variable named 'count' and a function to update it, 'setCount'
+  const [count, setCount] = useState(0);
 
-export default Child;
+  return (
+    <div>
+      <p>Count: {count}</p>
+      <button onClick={() => setCount(count + 1)}>Increment</button>
+      <button onClick={() => setCount(count - 1)}>Decrement</button>
+    </div>
+  );
+};
+
+export default Counter;
+
 ```
 
 In this example, useState(0) initializes the count state variable with an initial value of 0. The setCount function allows updating the count state variable. When the "Increment" button is clicked, it increases the count by 1, and when the "Decrement" button is clicked, it decreases the count by 1. The count value is displayed within the <p> element using curly braces {count} to showcase the current state.
