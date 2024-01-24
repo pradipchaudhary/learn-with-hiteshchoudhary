@@ -2,7 +2,7 @@
 
 > TypeScript is a syntactic superset of JavaScript which adds static typing.
 
-### What is TypeScript, and how does it differ from JavaScript?
+### #What is TypeScript, and how does it differ from JavaScript?
 
 **Answer:**
 
