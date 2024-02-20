@@ -83,3 +83,32 @@ a {
    margin: 0 auto;
    font-size: 1.1rem;
 }
+.main-content h1.project-title {
+   border-bottom: 1px solid #efefef;
+   margin-bottom: 16px;
+   padding-bottom: 6px;
+}
+.content {
+   margin: 30px 0;
+}
+.languages {
+   display: flex;
+   gap: 15px;
+}
+.card {
+   width: 300px;
+   height: 200px;
+   border: 1px solid #4e5fb3;
+   border-radius: 10px;
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   background: #4e5fb3;
+   color: #efefef;
+   cursor: pointer;
+}
+.card h1 {
+   color: #efefef;
+   font-weight: 500;
+   font-size: 1.75rem;
+}
