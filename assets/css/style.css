@@ -108,7 +108,14 @@ a {
    cursor: pointer;
 }
 .card h1 {
-   color: #efefef;
+   color: #dedddd;
    font-weight: 500;
    font-size: 1.75rem;
+}
+.card h1 a {
+   color: #eeeded;
+   text-decoration: none;
+}
+.card h1 a:hover {
+   color: #ffff;
 }
