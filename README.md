@@ -1,6 +1,6 @@
 # [Learn with Hitesh Choudhary](#learn-with-hitesh-choudhary)
 
-[![Foo](https://scontent.fktm17-1.fna.fbcdn.net/v/t39.30808-6/451044974_1011823540314729_340084825797983996_n.jpg?_nc_cat=105&ccb=1-7&_nc_sid=127cfc&_nc_ohc=Qv--xnfmTVkQ7kNvgFWmhEP&_nc_ht=scontent.fktm17-1.fna&_nc_gid=A2qGzpYgbmfxEPGwetS_cxQ&oh=00_AYArb8VDVjPZRU6Me3t9cYFIkmh_vuS1i4opNw4ujfokig&oe=66EA60DD)](https://chaicode.com/)
+[![Foo]([https://scontent.fktm17-1.fna.fbcdn.net/v/t39.30808-6/451044974_1011823540314729_340084825797983996_n.jpg?_nc_cat=105&ccb=1-7&_nc_sid=127cfc&_nc_ohc=Qv--xnfmTVkQ7kNvgFWmhEP&_nc_ht=scontent.fktm17-1.fna&_nc_gid=A2qGzpYgbmfxEPGwetS_cxQ&oh=00_AYArb8VDVjPZRU6Me3t9cYFIkmh_vuS1i4opNw4ujfokig&oe=66EA60DD](https://yt3.googleusercontent.com/zO8n2TfZoDXozQeKwq7APiVXn4BIZw7Q0-5SCVw4FXY_q2ysjtmVp5WYw1_M3bn9m3WiNarZGg=w1707-fcrop64=1,00005a57ffffa5a8-k-c0xffffffff-no-nd-rj))]([https://chaicode.com/](https://www.youtube.com/@HiteshCodeLab))
 
 Welcome to the **Learn with Hitesh Choudhary** repository! This repo is dedicated to learning and practicing the concepts taught by [Hitesh Choudhary.](https://github.com/hiteshchoudhary), including front-end, back-end, and full-stack development.
 
