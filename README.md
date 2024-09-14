@@ -10,27 +10,16 @@ This repository contains various projects, exercises, and examples as taught in 
 
 ### Key Concepts Covered
 
--   HTML, CSS, and JavaScript Basics
+-   C++
 -   Advanced JavaScript (ES6+)
--   Frontend Development (React.js, Tailwind CSS, etc.)
--   Backend Development (Node.js, Express, MongoDB, etc.)
--   Full-Stack Development
--   API Creation and Integration
+-   React.js
+-   Typescript
+-   Node.js
 -   Version Control with Git
 
 ## Folder Structure
 
--   `/frontend` - Projects and exercises related to frontend development.
--   `/backend` - Projects and exercises related to backend development.
--   `/fullstack` - Full-stack projects that combine both frontend and backend skills.
 -   `/practice` - Practice exercises to improve coding skills.
-
-## Prerequisites
-
-Before starting, make sure you have the following tools installed:
-
--   [Node.js](https://nodejs.org/) (for backend and full-stack projects)
--   [Git](https://git-scm.com/) (for version control)
 
 ## Installation
 
@@ -46,18 +35,6 @@ cd learn-with-hiteshchoudhary
 # Install dependencies (if applicable)
 npm install
 ```
-
-## Usage
-
-Once you have cloned the repository and installed the necessary dependencies, you can explore various projects and exercises.
-
-For example, to run a backend project:
-
-1. Navigate to the `backend` folder.
-2. Start the server by running:
-    ```bash
-    npm start
-    ```
 
 ## Contributions
 
