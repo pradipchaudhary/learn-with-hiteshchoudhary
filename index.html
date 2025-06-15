@@ -1,46 +1,274 @@
 <!DOCTYPE html>
 <html lang="en">
-   <head>
-      <meta charset="UTF-8" />
-      <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-      <title>Learn with Hitesh Choudhary</title>
-      <link rel="stylesheet" href="assets/css/style.css" />
-      <!-- Example: Tailwind CSS CDN -->
-      <!-- <script src="https://cdn.tailwindcss.com"></script> -->
-   </head>
-   <body class="bg-gray-50 font-sans text-gray-800">
-      <header class="bg-indigo-600 text-white py-10 text-center shadow">
-         <h1 class="text-4xl font-bold">Learn with Hitesh Choudhary</h1>
-         <p class="text-xl mt-2">Learn Programming with Hitesh Choudhary</p>
-         <a
-            href="https://github.com/pradipchaudhary/learn-with-hiteshchoudhary"
-            target="_blank"
-            class="inline-block mt-4 bg-white text-indigo-600 font-semibold px-6 py-2 rounded-full shadow hover:bg-indigo-100 transition"
-         >
-            View on GitHub
-         </a>
-      </header>
+<head>
+  <meta charset="UTF-8">
+  <title>Learn with Hitesh</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <script src="https://cdn.tailwindcss.com?plugins=typography"></script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <script defer src="https://unpkg.com/lucide@latest"></script>
+  <script defer src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+  <script defer src="https://cdn.jsdelivr.net/npm/particles.js@2.0.0/particles.min.js"></script>
+<script src="https://cdn.tailwindcss.com"></script>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=IBM+Plex+Serif:wght@300;400;500;600;700&family=IBM+Plex+Mono:wght@300;400;500;600;700&family=Inter&display=swap" rel="stylesheet">
+</head>
 
-      <main class="max-w-4xl mx-auto px-4 py-12">
-         <h2 class="text-3xl font-semibold text-center mb-10">Courses Offered</h2>
+<body class="font-inter bg-gray-950 text-gray-100 selection:bg-indigo-500 selection:text-white">
+  <!-- Particles background -->
+  <div id="particles-js" class="fixed inset-0 -z-10"></div>
 
-         <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6">
-            <div class="bg-white rounded-lg shadow p-6 text-center hover:shadow-lg transition">
-               <h3 class="text-xl font-bold text-indigo-600">
-                  <a href="#">JavaScript</a>
-               </h3>
+  <!-- Navigation -->
+  <header class="sticky top-0 backdrop-blur-md backdrop-saturate-150/60 bg-gray-950/60 border-b border-gray-800">
+    <div class="mx-auto max-w-7xl px-6">
+      <nav class="flex items-center justify-between h-16">
+        <a href="#" class="flex items-center gap-3 group">
+          <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-indigo-500 transition-transform group-hover:rotate-12" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.2" d="M12 20l9-5-9-5-9 5 9 5z" /><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.2" d="M12 12l9-5-9-5-9 5 9 5z"/></svg>
+          <span class="font-semibold text-lg tracking-tight">Learn<span class="text-indigo-500">H</span></span>
+        </a>
+        <ul class="hidden md:flex items-center gap-8 text-sm">
+          <li><a href="#courses" class="hover:text-indigo-400 transition-colors">Courses</a></li>
+          <li><a href="#features" class="hover:text-indigo-400 transition-colors">Features</a></li>
+          <li><a href="#stats" class="hover:text-indigo-400 transition-colors">Stats</a></li>
+          <li><a href="#community" class="hover:text-indigo-400 transition-colors">Community</a></li>
+        </ul>
+        <button class="md:hidden" id="mobileMenuBtn">
+          <i data-lucide="menu" class="w-6 h-6"></i>
+        </button>
+      </nav>
+    </div>
+  </header>
+
+  <!-- Mobile menu (hidden) -->
+  <div id="mobileMenu" class="fixed inset-0 bg-gray-950/90 backdrop-blur-2xl z-50 flex flex-col items-center justify-center gap-8 invisible opacity-0 transition-all duration-300">
+    <button id="closeMobile" class="absolute top-6 right-6">
+      <i data-lucide="x" class="w-7 h-7 text-gray-400 hover:text-gray-100"></i>
+    </button>
+    <a href="#courses" class="text-2xl font-medium hover:text-indigo-400">Courses</a>
+    <a href="#features" class="text-2xl font-medium hover:text-indigo-400">Features</a>
+    <a href="#stats" class="text-2xl font-medium hover:text-indigo-400">Stats</a>
+    <a href="#community" class="text-2xl font-medium hover:text-indigo-400">Community</a>
+  </div>
+
+  <!-- Hero -->
+  <section class="relative isolate overflow-hidden pt-24">
+    <div class="pointer-events-none absolute inset-0 bg-gradient-to-r from-indigo-600/10 via-indigo-400/5 to-transparent blur-3xl"></div>
+    <div class="mx-auto max-w-5xl px-6 text-center">
+      <h1 class="text-4xl md:text-6xl font-semibold tracking-tight bg-gradient-to-r from-indigo-400 to-indigo-200 bg-clip-text text-transparent animate-fade-in-up [--delay:100ms]">Master modern web development with <span class="text-indigo-400">Hitesh Choudhary</span></h1>
+      <p class="mt-6 text-lg md:text-xl text-gray-400 max-w-3xl mx-auto animate-fade-in-up [--delay:200ms]">Live coding. Real-world projects. A community that ships.</p>
+      <div class="mt-8 flex flex-col sm:flex-row justify-center gap-4 animate-fade-in-up [--delay:300ms]">
+        <a href="#courses" class="rounded-lg bg-indigo-600 hover:bg-indigo-500 transition-colors px-7 py-3 text-sm font-medium shadow-lg shadow-indigo-600/30">Browse Courses</a>
+        <a href="#community" class="rounded-lg border border-gray-700 hover:border-gray-500 transition-colors px-7 py-3 text-sm font-medium text-gray-300 hover:text-white">Join Community</a>
+      </div>
+    </div>
+
+    <!-- hero image -->
+    <div class="mt-16 flex justify-center animate-fade-in-up [--delay:400ms]">
+      <img src="https://images.unsplash.com/photo-1621619856624-42fd193a0661?w=2160&q=80" alt="coding setup" class="w-full max-w-4xl rounded-2xl shadow-2xl shadow-indigo-900/40 ring-1 ring-white/10">
+    </div>
+  </section>
+
+  <!-- Features -->
+  <section id="features" class="py-24 border-t border-gray-800">
+    <div class="mx-auto max-w-6xl px-6">
+      <h2 class="text-3xl md:text-4xl font-semibold tracking-tight text-center mb-16">Why learn here?</h2>
+      <div class="grid md:grid-cols-3 gap-12">
+        <div class="flex flex-col gap-4">
+          <div class="w-12 h-12 rounded-lg bg-indigo-600/10 flex items-center justify-center">
+            <i data-lucide="play-circle" class="w-6 h-6 text-indigo-400"></i>
+          </div>
+          <h3 class="font-semibold text-lg tracking-tight">Hands-on videos</h3>
+          <p class="text-gray-400 text-sm leading-relaxed">Each lesson is crafted around building an actual product, recorded with minimal cuts so you see the full workflow.</p>
+        </div>
+        <div class="flex flex-col gap-4">
+          <div class="w-12 h-12 rounded-lg bg-indigo-600/10 flex items-center justify-center">
+            <i data-lucide="zap" class="w-6 h-6 text-indigo-400"></i>
+          </div>
+          <h3 class="font-semibold text-lg tracking-tight">Cutting-edge stack</h3>
+          <p class="text-gray-400 text-sm leading-relaxed">From Typescript to serverless, we adopt the tools companies use today so your skills stay relevant tomorrow.</p>
+        </div>
+        <div class="flex flex-col gap-4">
+          <div class="w-12 h-12 rounded-lg bg-indigo-600/10 flex items-center justify-center">
+            <i data-lucide="users" class="w-6 h-6 text-indigo-400"></i>
+          </div>
+          <h3 class="font-semibold text-lg tracking-tight">Learner-first community</h3>
+          <p class="text-gray-400 text-sm leading-relaxed">Discord channels, weekly AMAs, pair-programming rooms and more—because learning happens fastest together.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Courses -->
+  <section id="courses" class="py-24">
+    <div class="mx-auto max-w-6xl px-6">
+      <h2 classtext-3xl md:text-4xl font-semibold tracking-tight text-center mb-16">Courses</h2>
+      <div class="grid sm-cols-2 lg:grid-cols-3 gap-8">
+        <!-- Course card -->
+        <a href="#" class="group relative overflow-hidden rounded-xl border border-gray-800 hover:border-gray-700 transition-colors">
+          <img src="https://images.unsplash.com/photo-1629946832022-c327f74956e0?w=2160&q=80" alt="course" class="h-48 w-full object-cover transition-transform group-hover:scale-110 duration-700">
+          <div class="p-6 bg-gray-900/60 backdrop-blur-sm absolute inset-0 opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+          <div class="relative p-6 flex flex-col gap-3">
+            <h3 class="text-lg font-semibold tracking-tight">React 2024</h3>
+            <p class="text-sm text-gray-400 leading-relaxed">Build a full-stack SaaS using React, Next.js 14, Prisma & more.</p>
+            <span class="mt-2 text-xs text-indigo-400 font-medium">30 Videos — 9h</span>
+          </div>
+        </a>
+
+        <!-- repeat for other courses -->
+        <a href="#" class="group relative overflow-hidden rounded-xl border border-gray-800 hover:border-gray-700 transition-colors">
+          <img src="https://images.unsplash.com/photo-1642615835477-d303d7dc9ee9?w=2160&q=80" alt="course" class="h-48 w-full object-cover transition-transform group-hover:scale-110 duration-700">
+          <div class="p-6 bg-gray-900/60 backdrop-blur-sm absolute inset-0 opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+          <div class="relative p-6 flex flex-col gap-3">
+            <h3 class="text-lg font-semibold tracking-tight">Docker & Kubernetes</h3>
+            <p class="text-sm text-gray-400 leading-relaxed">Containerise, orchestrate and deploy resilient micro-services.</p>
+            <span class="mt-2 text-xs text-indigo-400 font-medium">24 Videos — 6h</span>
+          </div>
+        </a>
+
+        <a href="#" class="group relative overflow-hidden rounded-xl border border-gray-800 hover:border-gray-700 transition-colors">
+          <img src="https://images.unsplash.com/photo-1724525647065-f948fc102e68?w=2160&q=80" alt="course" class="h-48 w-full object-cover transition-transform group-hover:scale-110 duration-700">
+          <div class="p-6 bg-gray-900/60 backdrop-blur-sm absolute inset-0 opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+          <div class="relative p-6 flex flex-col gap-3">
+            <h3 class="text-lg font-semibold tracking-tight">Rust for Backend</h3>
+            <p class="text-sm text-gray-400 leading-relaxed">Zero-cost abstractions and fearless concurrency for high-performance APIs.</p>
+            <span class="mt-2 text-xs text-indigo-400 font-medium">40 Videos — 12h</span>
+          </div>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Stats -->
+  <section id="stats" class="py-24 border-t border-gray-800">
+    <div class="mx-auto max-w-6xl px-6">
+      <h2 class="text-3xl md:text-4xl font-semibold tracking-tight text-center mb-16">Our impact</h2>
+      <div class="grid md:grid-cols-2 gap-12">
+        <div class="space-y-10">
+          <div>
+            <p class="text-4xl font-semibold tracking-tight">150k+</p>
+            <p class="text-gray-400 text-sm">Students enrolled worldwide</p>
+          </div>
+          <div>
+            <p class="text-4xl font-semibold tracking-tight">1M+</p>
+            <p class="text-gray-400 text-sm">Hours watched</p>
+          </div>
+          <div>
+            <p class="text-4xl font-semibold tracking-tight">4.9/5</p>
+            <p class="text-gray-400 text-sm">Average rating</p>
+          </div>
+        </div>
+
+        <div>
+          <div class="rounded-xl border border-gray-800 p-6">
+            <h3 class="text-lg font-semibold tracking-tight mb-4">Monthly growth</h3>
+            <div class="relative">
+              <div>
+                <!-- wrapper div > canvas bug fix -->
+                <canvas id="growthChart" height="160"></canvas>
+              </div>
             </div>
-            <div class="bg-white rounded-lg shadow p-6 text-center hover:shadow-lg transition">
-               <h3 class="text-xl font-bold text-indigo-600">
-                  <a href="#">TypeScript</a>
-               </h3>
-            </div>
-            <div class="bg-white rounded-lg shadow p-6 text-center hover:shadow-lg transition">
-               <h3 class="text-xl font-bold text-indigo-600">
-                  <a href="#">React</a>
-               </h3>
-            </div>
-         </div>
-      </main>
-   </body>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Community -->
+  <section id="community" class="py-24">
+    <div class="mx-auto max-w-4xl px-6 text-center">
+      <h2 class="text-3xl md:text-4xl font-semibold tracking-tight">A community that ships together</h2>
+      <p class="mt-6 text-lg text-gray-400 max-w-2xl mx-auto">Get feedback on your PRs, collaborate on hackathons and land your dream job faster.</p>
+      <a href="#" class="mt-10 inline-flex items-center gap-2 rounded-lg bg-indigo-600 hover:bg-indigo-500 transition-colors px-8 py-4 text-sm font-medium shadow-lg shadow-indigo-600/30">
+        <i data-lucide="send" class="w-4 h-4"></i>
+        Join Discord
+      </a>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="border-t border-gray-800 py-12">
+    <div class="mx-auto max-w-6xl px-6 flex flex-col md:flex-row items-center justify-between gap-8">
+      <div class="text-sm text-gray-400">&copy; <span id="year"></span> Learn with Hitesh. All rights reserved.</div>
+      <div class="flex items-center gap-6 text-sm">
+        <a href="#" class="hover:text-indigo-400 transition-colors">Terms</a>
+        <a href="#" class="hover:text-indigo-400 transition-colors">Privacy</a>
+        <a href="#" class="hover:text-indigo-400 transition-colors">Contact</a>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Animations -->
+  <style>
+    @keyframes fadeInUp {
+      0% {opacity:0; transform:translateY(20px);}
+      100% {opacity:1; transform:translateY(0);}
+    }
+    .animate-fade-in-up {animation:fadeInUp .9s cubic-bezier(.35,0,.25,1) forwards; animation-delay:var(--delay,0ms);}
+  </style>
+
+  <script>
+    lucide.createIcons();
+
+    // Mobile menu toggles
+    const mobileBtn = document.getElementById('mobileMenuBtn');
+    const mobileMenu = document.getElementById('mobileMenu');
+    const closeBtn  = document.getElementById('closeMobile');
+
+    mobileBtn.addEventListener('click', () => {
+      mobileMenu.classList.remove('invisible','opacity-0');
+      setTimeout(()=>mobileMenu.classList.add('opacity-100'),20);
+    });
+    closeBtn.addEventListener('click', () => {
+      mobileMenu.classList.remove('opacity-100');
+      mobileMenu.classList.add('opacity-0');
+      setTimeout(()=>mobileMenu.classList.add('invisible'),300);
+    });
+
+    // Chart.js
+    const ctx = document.getElementById('growthChart').getContext('2d');
+    new Chart(ctx, {
+      type: 'line',
+      data: {
+        labels: ['Jan', 'Feb', 'Mar', 'Apr', 'May','Jun'],
+        datasets: [{
+          label: 'Users',
+          data: [1000, 2200, 3800, 4600, 6800, 8200],
+          borderColor: '#6366f1',
+          backgroundColor: 'rgba(99,102,241,0.1)',
+          tension: .4,
+          pointRadius: 3,
+          fill: true
+        }]
+      },
+      options: {
+        plugins:{legend:{display:false}},
+        scales:{
+          y:{beginAtZero:true, grid:{color:'rgba(255,255,255,0.05)'}},
+          x:{grid:{display:false}, ticks:{color:'#9ca3af'}}
+        }
+      }
+    });
+
+    // ParticlesJS
+    particlesJS('particles-js',{
+      "particles":{
+        "number":{"value":60,"density":{"enable":true,"value_area":900}},
+        "color":{"value":"#4f46e5"},
+        "shape":{"type":"circle"},
+        "opacity":{"value":0.1,"random":false},
+        "size":{"value":3,"random":true},
+        "line_linked":{"enable":true,"distance":150,"color":"#4f46e5","opacity":0.2,"width":1},
+        "move":{"enable":true,"speed":1.2}
+      },
+      "interactivity":{
+        "events":{"onhover":{"enable":true,"mode":"repulse"},"onclick":{"enable":true,"mode":"push"}},
+        "modes":{"repulse":{"distance":100},"push":{"particles_nb":4}}
+      },
+      "retina_detect":true
+    });
+
+    // Current year
+    document.getElementById('year').textContent = new Date().getFullYear();
+  </script>
+</body>
 </html>
